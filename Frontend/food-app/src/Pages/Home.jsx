@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from "../Components/Hero";
 import FoodCard from "../Components/FoodCard";
 
@@ -8,7 +8,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
+    fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=veg")
       .then((res) => res.json())
       .then((data) => {
         // Pick only the 5 fields you need

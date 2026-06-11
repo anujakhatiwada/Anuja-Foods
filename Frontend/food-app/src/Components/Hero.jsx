@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">

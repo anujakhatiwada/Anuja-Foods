@@ -1,5 +1,3 @@
-import React from "react";
-
 const FoodCard = ({ recipe, index }) => {
   const { strMeal, strArea, strCategory, strYoutube, strMealThumb } = recipe;
 

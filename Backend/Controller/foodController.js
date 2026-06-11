@@ -45,3 +45,18 @@ export const postFood = async (req, res) => {
     console.log(error.message);
   }
 };
+
+
+export const updateFood = async (req, res) => {
+ try{
+  const food= await Food.findByIdAndUpdate(req.params.id, req.body, {new:true})
+
+  if(!food){
+    res.status(404).json({msg:"Food not found in db."})
+  }
+  res.status(200).json({msg:"Food updated sucessfully.", food})
+ }
+ catch(error){
+  console.log(error)
+ }
+}
